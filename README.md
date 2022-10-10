@@ -1,36 +1,6 @@
-## C4711-Assn1
+## Mini Path of Exile Inventory Simulator
+A mini game I made for school. It needed PHP CodeIgniter to run, and wasn't very shareable.  
+Now it's just html and javascript, no backend necessary.
 
-This project is forked from jedi-academy/CodeIgniter3.1-starter4 as a starter for a webapp built with CodeIgniter 3.1.
-
-This starter builds on [CodeIgniter3.1-starter3](https://github.com/jedi-academy/CodeIgniter3.1-starter3),
-adding an entity model and enhancing the collection models to use it.
-
-This starter adds a rich persistent data abstraction, initially in the form
-of the CSV_Model.
-
-An example, using menu items at a fast food place...
-
-`data/menuitems.csv`:
-
-    id,name,category,price
-    BM,Big Mac,entree,5.25
-    MF,Medium fried,side,2.00
-    LF,Large fries,side,3.00
-
-`application/models/themenu.php`:
-
-    class Themenu extends CSV_Model {
-      function __construct() {
-        parent::__construct('../data/menuitems.csv','id');
-      }
-    }
-
-Usage inside some controller, taking advantage of the DataMapper interface
-implemented by the CSV_Model...
-
-    $this->load->model('themenu;);
-    $all_the_items = $this->themenu->all();
-    ...
-    // get all of the entrees
-    $subset = $this->themenu->where('category','entree');
-    ...
+Double click index.html to open.
+Click the inventory tabs on the right, then drag-n-drop pieces of equipment into their respective slots on the left.
